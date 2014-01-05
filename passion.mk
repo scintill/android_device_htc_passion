@@ -98,3 +98,12 @@ $(call inherit-product, device/htc/qsd8k-common/qsd8k.mk)
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
+
+#CM stuff
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1 \
+    dalvik.vm.jit.codecachesize=0
+
+PRODUCT_PACKAGES += \
+    TORCH
