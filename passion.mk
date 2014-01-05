@@ -103,7 +103,8 @@ $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1 \
-    dalvik.vm.jit.codecachesize=0
+    dalvik.vm.jit.codecachesize=0 \
+    ro.sys.force_full_hwa=1 
 
 PRODUCT_PACKAGES += \
     TORCH
