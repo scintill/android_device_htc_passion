@@ -172,5 +172,8 @@
     <string name="config_mms_user_agent_profile_url" translatable="false">http://www.htcmms.com.tw/Android/Common/nexusone/ua-profile.xml</string>
 
     <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
+    <!--bool name="config_enableTorch">true</bool-->
+
+    <!--Nexus One has back, menu, home, search hardware buttons-->
+    <integer name="config_deviceHardwareKeys">15</integer>
 </resources>
