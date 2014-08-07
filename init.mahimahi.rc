@@ -12,8 +12,15 @@ on fs
     # Mount /system rw first to give the filesystem a chance to save a checkpoint
     mount yaffs2 mtd@system /system
     mount yaffs2 mtd@system /system ro remount
-    mount yaffs2 mtd@userdata /data nosuid nodev
     mount yaffs2 mtd@cache /cache nosuid nodev
+
+    # adbd for debugging
+    # adbd needs net
+    #ifup lo
+    #start adbd
+
+    exec /system/bin/logwrapper /system/bin/yaffsunlock "/system/xbin/mount -t tmpfs -o nosuid,nodev tmpfs /data" /system/bin/sh -c "/system/xbin/mount -t yaffs2 -o nosuid,nodev,unlock_encrypted=$(cat) /dev/block/mtdblock5 /data"
+    exec /system/bin/cryptsetup luksOpen /dev/block/mmcblk0p1 sdcard --key-file /data/local/sdcard.key
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi

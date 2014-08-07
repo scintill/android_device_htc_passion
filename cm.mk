@@ -22,6 +22,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_FINGERPRINT=google/pa
 PRODUCT_PACKAGES += Torch
 
 ### Scintill's customizations
+
+PRODUCT_COPY_FILES += \
+	vendor/scintill/prebuilts/cryptsetup:system/bin/cryptsetup
+
+## Slimming
 # I feel dirty putting especially the locale override here, but have poked around too long fruitlessly trying to find a better way
 
 # save space by not including other locale stuff
