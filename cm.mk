@@ -21,8 +21,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_FINGERPRINT=google/pa
 
 PRODUCT_PACKAGES += Torch
 
-### Scintill's customizations
+### scintill's customizations
 
+PRODUCT_PACKAGES += ADWLauncher
 PRODUCT_COPY_FILES += \
 	vendor/scintill/prebuilts/cryptsetup:system/bin/cryptsetup
 
