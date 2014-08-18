@@ -27,6 +27,12 @@ PRODUCT_PACKAGES += ADWLauncher
 PRODUCT_COPY_FILES += \
 	vendor/scintill/prebuilts/cryptsetup:system/bin/cryptsetup
 
+# KSM and zram
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ksm.default=1
+PRODUCT_COPY_FILES += \
+    device/htc/passion/fstab.zram:root/fstab.zram
+
 ## Slimming
 # I feel dirty putting especially the locale override here, but have poked around too long fruitlessly trying to find a better way
 

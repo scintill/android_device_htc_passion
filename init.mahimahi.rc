@@ -144,3 +144,9 @@ on property:dev.bootcomplete=1
     start qcom-post-boot
 
 service dspcrashd /system/bin/dspcrashd
+
+# https://github.com/Evervolv/android_vendor_ev/blob/7233d7e2967d2d0d1372c95ab2e964dbf4535d6c/prebuilt/common/etc/init.evervolv.rc
+# Set this property manually in /data/property to enable zram
+on property:persist.sys.zram.enabled=true
+    write /proc/sys/vm/page-cluster 0
+    swapon_all /fstab.zram

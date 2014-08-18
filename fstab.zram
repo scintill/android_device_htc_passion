@@ -1,0 +1,2 @@
+# zram 20MB
+/dev/block/zram0 none swap defaults zramsize=20971520
