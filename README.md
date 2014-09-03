@@ -22,6 +22,8 @@ Thanks goes to [parkedraccoon at XDA-Developers](http://forum.xda-developers.com
 
 3. Go to the LatinIME checkout base and run the commands contained in build/slim-LatinIME.sh
 
+4. Build as normal (source build/envsetup.sh; lunch cm\_passion-userdebug; mka bacon -j14)
+
 ## Install instructions
 
 1. Flash bootloader as directed at [parkedraccoon's thread](http://forum.xda-developers.com/showthread.php?t=2573352).
@@ -31,6 +33,8 @@ Thanks goes to [parkedraccoon at XDA-Developers](http://forum.xda-developers.com
 3. Set up encryption by formatting /dev/block/mtdblock5 with WhisperYAFFS and making /data/local/sdcard.key a LUKS key to the SD card.
 
 4. (Optional) Set the property `persist.sys.zram.enabled=true` to enable ZRAM.  Check in `/proc/swaps` to verify it's enabled.
+
+5. (Optional) Set up /etc/hosts file to prevent apps phoning home.
 
 ## Known issues
 

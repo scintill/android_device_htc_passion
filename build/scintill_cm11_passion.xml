@@ -5,6 +5,9 @@
 	<project path="device/htc/qsd8k-common" name="Evervolv/android_device_htc_qsd8k-common" revision="kitkat" />
 	<project path="kernel/htc/qsd8k" name="scintill/android_kernel_htc_qsd8k" revision="kitkat" />
 	<project path="vendor/htc" name="Evervolv/android_vendor_htc" revision="kitkat" />
+	<remove-project name="CyanogenMod/android_hardware_qcom_media" />
+	<project path="hardware/qcom/media-legacy" name="Evervolv/android_hardware_qcom_media-legacy" revision="kitkat" />
+	<project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3" name="Evervolv/android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3" revision="kitkat" />
 
 	<!-- swap these components for compatibility and launcher preference -->
 	<remove-project name="CyanogenMod/android_packages_apps_Trebuchet" />
@@ -19,7 +22,6 @@
 	<project path="hardware/qcom/gps-legacy" name="Evervolv/android_hardware_qcom_gps-legacy" revision="kitkat" />
 
 	<!-- remove these components for size -->
-	<remove-project name="CyanogenMod/android_art" />
 	<remove-project name="CyanogenMod/android_packages_apps_CMWallpapers" />
 	<remove-project name="CyanogenMod/android_external_whispersystems_WhisperPush" />
 	<!-- you will get some errors about email intermediate being used in bluetooth, so at least temporarily sync it in to the work tree -->
@@ -29,14 +31,11 @@
 	<remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
 	<remove-project name="CyanogenMod/android_packages_apps_ThemeChooser" />
 	<remove-project name="CyanogenMod/android_packages_providers_ThemesProvider" />
-	<remove-project name="CyanogenMod/android_external_vim" />
+	<remove-project name="CyanogenMod/android_external_nano" />
 
 	<!-- new components -->
 	<project path="external/yaffsunlock" name="scintill/yaffsunlock" revision="8f0a2e1484c74a34fdf2929f5a8aaa900e04a835" />
 
-	<!-- these repos listed by evervolv device repo as dependencies. may not actually be used -->
-	<project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3" name="Evervolv/android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3" revision="kitkat" />
+	<!-- listed by evervolv device repo as dependency. I think not actually used right now -->
 	<project path="prebuilts/gcc/linux-x86/arm/arm-linux-linaro-4.9" name="Evervolv/android_prebuilts_gcc_linux-x86_arm_arm-linux-linaro-4.9" revision="kitkat" />
-	<remove-project name="CyanogenMod/android_hardware_qcom_media" />
-	<project path="hardware/qcom/media-legacy" name="Evervolv/android_hardware_qcom_media-legacy" revision="kitkat" />
 </manifest>
